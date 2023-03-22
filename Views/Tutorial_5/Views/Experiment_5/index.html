@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial 5.5 - (22SOECE13039)</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="sample.css" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center align-items-center inner-row">
+        <div class="col-md-5">
+          <div class="form-box login-form p-4">
+            <div class="form-title">
+              <h2 class="fw-bold mb-3 h1tag card-text text-primary">
+                Register
+              </h2>
+            </div>
+
+            <form action="">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  title="tooltip widget used for Q5"
+                  class="form-control form-control-sm"
+                  placeholder="Username"
+                  id="floatinginput" />
+                <label for="floatinginput">Username</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  title="tooltip widget used for Q5"
+                  class="form-control form-control-sm"
+                  placeholder="Password"
+                  id="floatingpass" />
+                <label for="floatingpass">Password</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  title="tooltip widget used for Q5"
+                  class="form-control form-control-sm"
+                  placeholder="Re-Enter Password"
+                  id="floatingrepass" />
+                <label for="floatingrepass">Re-Enter Password</label>
+              </div>
+
+              <div class="input-group mb-3 container">
+                <label class="form-label mt-1">Gender:</label>
+                <div class="form-check">
+                  <input
+                    title="checkboxradio widget used for Q5"
+                    class="form-check-input wid1"
+                    type="radio"
+                    name="gender"
+                    id="male"
+                    value="male" />
+                  <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    title="checkboxradio widget used for Q5"
+                    class="form-check-input wid2"
+                    type="radio"
+                    name="gender"
+                    id="female"
+                    value="female" />
+                  <label class="form-check-label" for="female">Female</label>
+                </div>
+              </div>
+
+              <div class="input-group mb-3">
+                <div class="form-floating">
+                  <input
+                    type="number"
+                    title="tooltip widget used for Q5"
+                    class="form-control form-control-sm"
+                    placeholder="Age"
+                    id="floatingage" />
+                  <label for="floatingage">Age</label>
+                </div>
+                <div class="form-floating">
+                  <input
+                    type="date"
+                    title="tooltip widget used for Q5"
+                    class="form-control form-control-sm"
+                    placeholder="Date of Birth"
+                    id="floatingdob" />
+                  <label for="floatingdob">Date of Birth</label>
+                </div>
+              </div>
+
+              <div class="input-group mb-3">
+                <div class="form-floating">
+                  <input
+                    type="text"
+                    title="tooltip widget used for Q5"
+                    class="form-control form-control-sm"
+                    placeholder="Country"
+                    id="floatingcountry" />
+                  <label for="floatingcountry">Country</label>
+                </div>
+                <div class="form-floating">
+                  <input
+                    type="text"
+                    title="tooltip widget used for Q5"
+                    class="form-control form-control-sm"
+                    placeholder="State"
+                    id="floatingstate" />
+                  <label for="floatingstate">State</label>
+                </div>
+                <div class="form-floating">
+                  <input
+                    type="text"
+                    title="tooltip widget used for Q5"
+                    class="form-control form-control-sm"
+                    placeholder="City"
+                    id="floatingcity" />
+                  <label for="floatingcity">City</label>
+                </div>
+              </div>
+
+              <div class="input-group">
+                <input type="file" class="form-control" id="profile" />
+              </div>
+              <div class="mt-3">
+                <button
+                  class="ui-button ui-widget ui-corner-all buttonwid"
+                  title="button widget used for Q5">
+                  Register
+                </button>
+              </div>
+            </form>
+
+            <div class="mt-3">
+              <span>Already Registered? </span
+              ><a
+                href="./login.html"
+                class="link-secondary"
+                style="text-decoration: none"
+                >Login</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  $(function () {
+    $(".wid1, .wid2").checkboxradio();
+  });
+
+  $(function () {
+    $("input[type=text]").tooltip();
+    $("input[type=radio]").tooltip();
+    $("input[type=radio]").tooltip();
+  });
+
+  $(function () {
+    $(".buttonwid").tooltip();
+  });
+
+  $(function () {
+    $("input[type=date]").datepicker();
+  });
+
+  $(function () {
+    $(".widget input[type=submit], .widget a, .widget button").button();
+    $("button, input, a").on("click", function (event) {
+      event.preventDefault();
+    });
+  });
+</script>
